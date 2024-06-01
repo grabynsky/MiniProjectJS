@@ -1,4 +1,4 @@
-const container = document.getElementsByClassName('container')[0];
+const container = document.getElementById('users-container');
 
 const url = 'https://jsonplaceholder.typicode.com/users';
 
@@ -6,11 +6,7 @@ const url = 'https://jsonplaceholder.typicode.com/users';
 fetch(url)
     .then(response => response.json())
     .then(users => {
-        
-        function detains(){
-            return;
-        }
-        
+
         users.map(({id, name})=> {
 
             const detainsUserBtn = document.createElement('button');
@@ -26,6 +22,13 @@ fetch(url)
             detainsUserBtn.classList.add('detains-btn');
 
             userDiv.appendChild(detainsUserBtn);
+            
             container.appendChild(userDiv);
+
+            detainsUserBtn.addEventListener('click', ()=>{
+                return window.location.href = `user-details.html?id=${id}`
+            });
         });
+
+       
     })

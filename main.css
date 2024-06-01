@@ -6,13 +6,21 @@ body{
     font-style: normal;
 }
 
-.container{
+#container{
     max-width: 100vw;
     min-width: 700px;
 }
 
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .user-div {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     min-width: 345px;
@@ -25,7 +33,8 @@ body{
 }
 
 
-.detains-btn {
+.detains-btn,
+.post-of-current-user-btn {
     font-family: "Roboto", sans-serif;
     padding: 5px;
     border-radius: 5px;
@@ -33,11 +42,39 @@ body{
     background-color: cornflowerblue;
     color: aliceblue;
     cursor: pointer;
+    width: 70%;
+    margin: 10px 0;
 }
 
-.detains-btn:hover {
+.detains-btn:hover,
+.post-of-current-user-btn:hover {
     background-color: aliceblue;
     color: cornflowerblue;
     border: 1px solid cornflowerblue;
     transition: all 5ms ease;
+}
+
+.post-of-current-user-btn{
+    width: 100%;
+}
+
+#posts-container{
+    margin-top: 20px;
+}
+
+.post-div{
+    width: 18%;
+
+    display: inline-block;
+    margin: 1%;
+    background-color: #96b4ea;
+    color: aliceblue;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.view-details{
+    color: #5a7d94;
+    text-decoration: none;
 }
