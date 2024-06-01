@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 userDetails.appendChild(postOfCurrentUserBtn);
 
                 postOfCurrentUserBtn.addEventListener('click', () => {
-                    fetch(`https://jsonplaceholder.typicode.com/users/${userId}/posts`)
+                    fetch(`${url}/${userId}/posts`)
                         .then(response => response.json())
                         .then(posts => {
 
